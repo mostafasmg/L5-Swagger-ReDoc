@@ -50,14 +50,6 @@ class RoutesTest extends TestCase
     }
 
     /** @test */
-    public function itCanServeAssets()
-    {
-        $this->get(l5_swagger_asset('swagger-ui.css'))
-            ->assertSee('.swagger-ui')
-            ->isOk();
-    }
-
-    /** @test */
     public function userCanAccessOauth2Redirect()
     {
         $this->get(route('l5-swagger.oauth2_callback'))
